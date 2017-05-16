@@ -39,8 +39,6 @@ public class RaspberryPiGpioRouteBuilder extends RouteBuilder {
                 RaspiNames.P1_24,
                 RaspiNames.P1_26};
 
-        System.out.println(Arrays.deepToString(pinsArray));
-
         rest("/").get("/gpio").route().process(exchange -> {
             JSONObject jsonObject = new JSONObject();
 
