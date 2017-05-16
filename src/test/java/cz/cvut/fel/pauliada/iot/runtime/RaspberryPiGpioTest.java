@@ -97,7 +97,6 @@ public class RaspberryPiGpioTest extends TestCase {
 
                 // Send post request
                 con.setDoOutput(true);
-                con.setDoInput(false);
                 DataOutputStream wr = new DataOutputStream(con.getOutputStream());
                 wr.writeBytes("{\"state\":true}");
                 wr.flush();
