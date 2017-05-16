@@ -4,7 +4,5 @@ EXPOSE 8080
 ADD iot-runtime.iml iot-runtime.iml
 ADD pom.xml pom.xml
 ADD src src
-RUN mvn install package -DskipTests
-ADD target target
-ADD target/iot-runtime-1.0-SNAPSHOT.jar iot-runtime.jar
-CMD ["java","-jar", "iot-runtime.jar"]
+RUN mvn package -DskipTests
+CMD ["java","-jar", "target/iot-runtime-1.0-SNAPSHOT.jar"]
