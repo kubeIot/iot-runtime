@@ -1,3 +1,9 @@
+run iot runtime:
+sudo mvn camel:run -DskipTests
+
+run test (Runtime has to be already started. If linux throw "busy" exception, run test again.):
+mvn -Dtest=RaspberryPiGpioTest test
+
 build docker image:
 sudo docker build . -t iot-runtime
 
